@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            width: 100vw;
+            height: 100vh;
+        }
+        .circle{
+            background-color: gainsboro;
+            width: 20vw;
+            aspect-ratio: 1/1;
+            border-radius: 100%;
+            position: absolute;
+        }
+        #circle-2{
+            top: 30%;
+            left: 5%;
+        }
+
+        #circle-3{
+            left: 25%;
+        }
+
+        #circle-4{
+            top: 40%;
+            left: 30%;
+        }
+
+        #circle-5{
+            top: 30%;
+            left: 60%;
+        }
+    </style>
+    <title>Document</title>    
+</head>
+<body>
+    <div class="circle" id="circle-1"></div>
+    <div class="circle" id="circle-2"></div>
+    <div class="circle" id="circle-3"></div>
+    <div class="circle" id="circle-4"></div>
+    <div class="circle" id="circle-5"></div>
+</body>
+<script src="./anseki-leader-line-6c26a9d/leader-line.min.js"></script>
+<script>
+    new LeaderLine (
+        document.getElementById('circle-1'),
+        document.getElementById('circle-2')
+    );
+</script>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script
+  src="https://code.jquery.com/jquery-3.6.1.js"
+  integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+  crossorigin="anonymous"></script>
+  <style>
+	*{
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		transition-duration: 480ms;
+	}
+
+	:root{
+		--primary-color: #3d9991;
+		--text-black: rgba(26,26,26,.9);
+		--text-white: white;
+	}
+
+	body{
+		position: relative;
+	}
+
+	.close, .node-circle{
+		cursor: pointer;
+	}
+
+	.inner-container > h3{
+		margin-bottom: 1rem;
+	}
+
+	.overlay{
+		z-index: 5;
+		width: 100vw;
+		height: 100vh;
+		position: fixed;
+		left: 0;
+		top: 0;
+		background-color: rgba(0, 0, 0, 0.3);
+		display: none;
+	}
+
+	.close{
+		background-color: transparent;
+		border: none;
+		text-decoration: underline;
+		position: absolute;
+		right: 2.5rem;
+		top: 1.5rem;
+	}
+
+	.info-box{
+		width: 50vw;
+		height: fit-content;
+		position: absolute;
+		left: 50%;
+    	top: 50%;
+    	transform: translate(-50%,-50%);
+		z-index: 10;
+		background-color: white;
+		padding: 2rem;
+		padding: 2.5rem;
+		border: 1px solid black;
+		display: none;
+	}
+
+	.display-block{
+		display: block;
+	}
+
+	.display-flex{
+		display: flex;
+	}
+
+	.circle-container{
+		display: flex;
+		width: 100vw;
+		aspect-ratio: 1/1;
+		align-items: center;
+		margin-top: 5rem;
+		padding: auto;
+	}
+
+	.inner-container{
+		width: 80%;
+		border: 4px solid var(--primary-color);
+		border-radius: 1.5rem;
+		padding: 1rem;
+	}
+	
+	.node-circle{
+		width: 80%;
+		aspect-ratio: 1/1;
+		background-color: hsla(0, 0%, 80%, 1);
+		border-radius: 100%;
+		margin-bottom: 1rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.node-circle > p{
+		color: var(--primary-color);
+		font-family: sans-serif;
+	}
+	/* Mobile Viewport Exclusive */
+	@media only screen and (width < 600px), (orientation: portrait){
+		.circle-container{
+			flex-direction: column;
+		}
+		.inner-container{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			height: fit-content;
+		}
+	}
+
+	/* Desktop Viewport Exclusive */
+	@media only screen and (width >= 600px) and (orientation: landscape){
+		.outer-big-circle{
+				border-radius: 100%;
+				position: relative;
+				height: 50%;
+		}
+
+		.node-circle{
+			width: 14vw;
+		}
+			
+		.circle-absolute{
+			position: absolute;
+		}
+
+		.inner-container{
+			aspect-ratio: 1/1;
+		}
+
+		#box-1, #box-3{
+			width: 18%;
+		}
+
+		#box-2{
+			width: 45%;
+			background-color: var(--primary-color);
+		}
+		
+		.circle-container{
+			justify-content: space-around;
+		}
+
+		#node-1{
+			bottom: 0;
+			left: -2%;
+		}
+
+		#node-2{
+			bottom: -10%;
+			left: 35%;
+		}
+
+		#node-3{
+			bottom: 5%;
+			right: 0%;
+		}
+
+		#node-4{
+			top: 40%;
+			right: 25%;
+		}
+
+		#node-5{
+			top: 37%;
+			right: 60%;
+		}
+
+		#node-6{
+			
+		}
+
+		#node-7{
+			left: 40%;
+			top: -5%;
+		}
+
+		#node-8{
+			right: -10%;
+			top: 10%;
+		}
+}
+
+  </style>
+  <title>Document</title>
+</head>
+<body>
+	<div class="circle-container">
+		<div class="inner-container" id="box-1">
+			<h3>1. What a girl's life is like</h3>
+			<div class="node-circle"><p>Remote</p></div>
+			<div class="node-circle"><p>Remote</p></div>
+			<div class="node-circle"><p>Remote</p></div>
+		</div>
+		<div class="inner-container outer-big-circle" id="box-2">
+			<div class="node-circle circle-absolute" id="node-1"><p>Remote</p></div>
+			<div class="node-circle circle-absolute" id="node-2"><p>Remote</p></div>
+			<div class="node-circle circle-absolute" id="node-3"><p>Remote</p></div>
+			<div class="node-circle circle-absolute" id="node-4"><p>Remote</p></div>
+			<div class="node-circle circle-absolute" id="node-5"><p>Remote</p></div>
+			<div class="node-circle circle-absolute" id="node-6"><p>Remote</p></div>
+			<div class="node-circle circle-absolute" id="node-7"><p>Remote</p></div>
+			<div class="node-circle circle-absolute" id="node-8"><p>Remote</p></div>
+		</div>
+		<div class="inner-container" id="box-3">
+			<h3>10. Impact</h3>
+			<div class="node-circle"><p>Remote</p></div>
+			<div class="node-circle"><p>Remote</p></div>
+			<div class="node-circle"><p>Remote</p></div>
+		</div>
+	</div>
+	<div class="info-box">
+		<button class="close">
+			<p>Close</p>
+		</button>
+		<h3>What a girl's life is like</h3>
+		<p>Our girls in Peru come from extremely remote communities that are 3 to 15 hours away from any secondary schools.</p>
+	</div>
+	<div class="overlay"></div>
+</body>
+<script src="./anseki-leader-line-6c26a9d/leader-line.min.js"></script>
+<script>
+	let toggleOverlay = $(".overlay");
+	let node = $(".node-circle");
+	let infoBox = $(".info-box");
+	let closeButton = $(".close");
+
+	node.click(function() {
+		toggleOverlay.show();
+		infoBox.show();
+	});
+
+	closeButton.click(function() {
+		toggleOverlay.hide();
+		infoBox.hide();
+	});
+
+	new LeaderLine(
+		document.getElementById('box-1'),
+		document.getElementById('node-1')
+	);
+	new LeaderLine(
+		document.getElementById('node-1'),
+		document.getElementById('box-3')
+	);
+	new LeaderLine(
+		document.getElementById('node-2'),
+		document.getElementById('node-3')
+	);
+</script>
+</html>
