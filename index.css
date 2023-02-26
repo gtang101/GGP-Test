@@ -20,6 +20,10 @@
   margin: 0;
 }
 
+html.sr .load-hidden{
+  visibility: hidden;
+}
+
 body {
   margin: 0;
   font-family: 'Raleway', sans-serif;
