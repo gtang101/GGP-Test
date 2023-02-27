@@ -13,7 +13,7 @@ function addTextReveal(){
 
 // Scroll Reveal
 function scrollRevealStart(){
-    const sr = ScrollReveal();
+    const sr = ScrollReveal( {reset: true} );
 
     sr.reveal('.text-reveal');
     console.log("ScrollReveal");
