@@ -26,4 +26,5 @@ window.onload = () => {
     addTextReveal();
     $('.text-reveal').addClass('load-hidden');
     scrollRevealStart();
+    console.log("Loaded");
 };
