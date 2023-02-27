@@ -199,6 +199,13 @@ img{
   margin: auto;
 }
 
+#decor-line{
+  position: absolute;
+  margin-top: 15em;
+  width: 100%;
+  z-index: -8000;
+}
+
 /* Desktop style */
 @media only screen and (min-width: 1024px) {
   .text-content-container{
@@ -239,11 +246,5 @@ img{
   #two-svg{
     width: 30em;
   }
-}
 
-#decor-line{
-    position: absolute;
-    margin-top: 50%;
-    width: 100%;
-    z-index: -8000;
 }
