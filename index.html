@@ -10,28 +10,43 @@
 	<script src="https://code.jquery.com/jquery-3.6.3.min.js"
   			integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
   			crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
 	<title>Document</title>
 </head>
 <body>
+<div id="decor-line" class="center-grid"><img src="https://drive.google.com/uc?id=1ChkuvBmVcAgRfiSv6d6xssamlp33oojx" alt=""></div>
 	<article id="journey-area">
-		<div id="decor-line" class="center-grid"><img src="https://drive.google.com/uc?id=1ChkuvBmVcAgRfiSv6d6xssamlp33oojx" alt=""></div>
-          <h1>The Journey of a Girl</h1>
-          <h2>Scroll to learn more</h2>
-
-          <!-- <div class="center-grid"><img src='https://drive.google.com/uc?id=1Uh_t6A5aUjtzoXFu7OlcR69s3ho7zI5v' alt=""/></div> -->
+          <div class="slide" id="slide-zero">
+			<div class="text-content-container">
+						<h1>The Journey of a Girl</h1>
+						<p class="text-center">One in eight people alive today is a girl under the age of eighteen.</p>
+						<p class="text-center">Global Girl Project is dedicated to mobilising girls who live in poverty within the Global South. We support them to become leaders for their families, communities, countries and the world. </p>
+						<p class="text-center">Scroll down to learn about how we do this.</p>
+					  </div>
+			<div class="center-grid"><img src='https://drive.google.com/uc?id=1Uh_t6A5aUjtzoXFu7OlcR69s3ho7zI5v' alt=""/></div>
+		  </div>
 
           <section id="slide-one" class="slide">
-			<div class="center-grid"><img id='one-svg' src='https://drive.google.com/uc?id=1SKEoISOf__jkQ794Jnp78-XRySgU9toq' alt=""/></div>
 			<div class="text-content-container">
-			  <h2>1. What a girl's life is like</h2>
-			  <p>The girls who participate in the Global Girl Project Leadership Initiative are keen to make the most of all opportunities. They are resilient, determined and powerful.</p>
-			  <p>However, they also face many challenges and barriers:</p>
-			  <h3>Isolation and lack of independence</h3>
-			  <p>Often, our girls experience a lack of independence and have limited access to the outside world. Their worlds are often quite isolated, involving just school and home. They have little access to extracurricular activities, mobile phones or the internet.</p>
-			  <h3>Gendered roles</h3>
-			  <p>Frequently girls are subject to gendered roles in society. This means they are typically expected to fill the role of a mother and a wife, or certain types of employment. Many girls do want to be mothers and wives. However, there are additional roles girls want to fill but cannot because of gendered expectations.</p>
-			  <h3>Political unrest and instability</h3>
-			  <p>Many girls, like our girls from Haiti, can be dealing with political unrest and instability which plays itself out in the form of violence in the streets.</p>
+				<h2>1. What a girl's life is like</h2>
+				<p class="text-center">The girls who participate in the Global Girl Project Leadership Initiative are keen to make the most of all opportunities. They are resilient, determined and powerful.</p>
+				<p>However, they also face many challenges and barriers:</p>
+			</div>
+			<div class="center-grid"><img id='one-svg' src='https://drive.google.com/uc?id=1SKEoISOf__jkQ794Jnp78-XRySgU9toq' alt=""/></div>
+			<div class="text-content-container flex flex-column col-layout">
+			  <div class="col">
+				<h3>Isolation and lack of independence</h3>
+				<p>Often, our girls experience a lack of independence and have limited access to the outside world. Their worlds are often quite isolated, involving just school and home. They have little access to extracurricular activities, mobile phones or the internet.</p>
+			  </div>
+			  <div class="col">
+				<h3>Gendered roles</h3>
+				<p>Frequently girls are subject to gendered roles in society. This means they are typically expected to fill the role of a mother and a wife, or certain types of employment. Many girls do want to be mothers and wives. However, there are additional roles girls want to fill but cannot because of gendered expectations.</p>
+			  </div>
+			  <div class="col">
+				<h3>Political unrest and instability</h3>
+				<p>Many girls, like our girls from Haiti, can be dealing with political unrest and instability which plays itself out in the form of violence in the streets.</p>
+			  </div>
 			</div>
 		  </section>
 
@@ -110,6 +125,33 @@
 		<div class="lds-dual-ring"></div>
 		<h3>Loading</h3>
 	</div>
+
+	<div class="flex slide-control">
+		<div class="control-group flex flex-column">
+			<a href="#slide-one">
+				<div class="control-item">1</div>
+			</a>
+			<a href="#slide-two">
+				<div class="control-item">2</div>
+			</a>
+			<a href="#slide-three">
+				<div class="control-item">3</div>
+			</a>
+			<a href="#slide-four">
+				<div class="control-item">4</div>
+			</a>
+			<a href="#slide-five">
+				<div class="control-item">5</div>
+			</a>
+			<a href="#slide-six">
+				<div class="control-item">6</div>
+			</a>
+			<a href="#slide-seven">
+				<div class="control-item">7</div>
+			</a>
+		</div>
+	</div>
+
 	<script>
 	// Add class text-reveal to all the child within text-content-container class
 		const textContainer = document.querySelectorAll('.text-content-container');
