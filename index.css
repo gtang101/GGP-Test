@@ -92,8 +92,8 @@ li{
 }
 
 .slide{
-  padding: 1rem 0;
-  min-height: calc(1rem + 100vh);
+  padding: 2rem 0;
+  min-height: calc(2rem + 100vh);
 }
 
 .text-content-container, .img-row, .text-side-img{
@@ -224,7 +224,6 @@ img{
 @media only screen and (min-width: 1024px) {
   .text-content-container, .img-row, .text-side-img{
     margin: 0 var(--size-fluid-8);
-    margin-top: var(--size-8);
   }
 
   .text-content-container p, .text-content-container h3, .text-content-container ul{
