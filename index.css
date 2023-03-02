@@ -109,11 +109,11 @@ li{
 .quote-block p {
   font-size: var(--h4-fs);
   color: var(--quote-text-color);
+  text-align: center;
 }
 
 p.quote{
   font-weight: 600;
-  text-align: center;
 }
 
 .quote-block{
