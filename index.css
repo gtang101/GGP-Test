@@ -162,7 +162,7 @@ img{
   position: fixed;
   height: 100vh;
   overflow-y: scroll;
-  top: 0;
+  bottom: 0;
   -ms-overflow-style: none;
   scrollbar-width: none;
   visibility: hidden;
@@ -191,21 +191,9 @@ img{
   background-color: hsla(0, 0%, 100%);
 }
 
-.control-item:hover{
+.control-item:hover, a:focus-within .control-item{
   background-color: var(--bg-color-1);
   cursor: pointer;
-}
-
-.placeholder{
-  background-color: azure;
-  width: 80vw;
-  height: 20vh;
-  place-content: center;
-  margin: auto;
-}
-
-#slide-zero{
-  position: relative;
 }
 
 /* Need to return to the decor line to sort out the responsiveness later on */
@@ -248,11 +236,6 @@ img{
     width: 0;
   }
 
-  .placeholder{
-    width: 50em;
-    height: 20em;
-  }
-
   img{
     width: 50em;
   }
@@ -263,5 +246,8 @@ img{
   
   #two-svg{
     width: 30em;
+  }
+  .slide-control{
+    visibility: visible;
   }
 }
