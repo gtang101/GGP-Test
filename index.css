@@ -54,7 +54,7 @@ h3{
 
 p{
   font-size: var(--p-fs);
-  margin-bottom: var(--size-3);
+  margin-top: var(--size-3);
 }
 
 .text-content-container p, .text-content-container h3, .text-content-container ul{
@@ -93,7 +93,13 @@ li{
 
 .slide{
   padding: 2rem 0;
-  min-height: calc(2rem + 100vh);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#slide-zero{
+  min-height: 100vh;
 }
 
 .text-content-container, .img-row, .text-side-img{
@@ -194,12 +200,14 @@ img, .img{
 .control-item:hover, a:focus-within .control-item{
   background-color: var(--bg-color-1);
   cursor: pointer;
+  font-weight: bold;
 }
 
 /* Need to return to the decor line to sort out the responsiveness later on */
 
 #decor-line{
   position: absolute;
+  top: 10vh;
   width: 100%;
   z-index: -8000;
 }
@@ -211,8 +219,17 @@ img, .img{
 
 /* Desktop style */
 @media only screen and (min-width: 1024px) {
+  .slide{
+    padding: 4rem 0;
+  }
+
   .text-content-container, .img-row, .text-side-img{
     margin: 0 var(--size-fluid-8);
+  }
+
+  .img-row, .img-reveal{
+    margin-top: 4rem;
+    margin-bottom: 4rem;
   }
 
   .text-content-container p, .text-content-container h3, .text-content-container ul{
