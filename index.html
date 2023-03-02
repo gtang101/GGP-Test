@@ -191,10 +191,10 @@
 		
 		// Scroll Reveal
 		function scrollRevealStart(){
-			const sr = ScrollReveal( {reset: true, viewFactor: 1} );
+			const sr = ScrollReveal( {reset: true, viewFactor: 0.6, delay: 150} );
 		
 			sr.reveal('.text-reveal');
-			sr.reveal('.sequence', { interval: 800, viewFactor: 1, reset: false});
+			sr.reveal('.sequence', { interval: 800, viewFactor: 1});
 			sr.reveal('.sequence-a', { interval: 800, viewFactor: 0});
 			sr.reveal('.img-reveal', {viewFactor: 0.3})
 			console.log("ScrollReveal");
