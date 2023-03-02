@@ -96,7 +96,7 @@ li{
   min-height: calc(1rem + 100vh);
 }
 
-.text-content-container{
+.text-content-container, .img-row, .text-side-img{
   margin: 0 var(--size-fluid-3);
   margin-top: var(--size-3);
 }
@@ -149,6 +149,10 @@ img{
   width: 100vw;
 }
 
+.img-row img{
+  width: 30vw;
+}
+
 #two-svg{
   width: 80vw;
 }
@@ -199,16 +203,26 @@ img{
   margin: auto;
 }
 
+#slide-zero{
+  position: relative;
+}
+
+/* Need to return to the decor line to sort out the responsiveness later on */
+
 #decor-line{
   position: absolute;
-  margin-top: 15em;
   width: 100%;
   z-index: -8000;
 }
 
+#decor-line img{
+  width: 76%;
+  margin: auto;
+}
+
 /* Desktop style */
 @media only screen and (min-width: 1024px) {
-  .text-content-container{
+  .text-content-container, .img-row, .text-side-img{
     margin: 0 var(--size-fluid-8);
     margin-top: var(--size-8);
   }
@@ -242,9 +256,12 @@ img{
   img{
     width: 50em;
   }
+
+  .col img{
+    width: auto;
+  }
   
   #two-svg{
     width: 30em;
   }
-
 }
