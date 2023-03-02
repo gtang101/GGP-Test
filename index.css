@@ -145,7 +145,7 @@ p.quote{
   position: absolute;
 }
 
-img{
+img, .img{
   width: 100vw;
 }
 
@@ -236,11 +236,11 @@ img{
     width: 0;
   }
 
-  img{
+  img, .img{
     width: 50em;
   }
 
-  .col img{
+  .col img, col .img{
     width: auto;
   }
   
