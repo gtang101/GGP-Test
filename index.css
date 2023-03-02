@@ -165,6 +165,7 @@ img{
   top: 0;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  visibility: hidden;
 }
 
 .slide-control::-webkit-scrollbar{
