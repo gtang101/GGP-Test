@@ -114,7 +114,7 @@ li{
 }
 
 .quote-block p {
-  font-size: var(--h3-fs);
+  font-size: var(--h4-fs);
   color: var(--quote-text-color);
   text-align: center;
 }
