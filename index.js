@@ -13,11 +13,11 @@ function addTextReveal(){
 
 // Scroll Reveal
 function scrollRevealStart(){
-    const sr = ScrollReveal( {viewFactor: 0.6, delay: 100} );
+    const sr = ScrollReveal( {viewFactor: 0.4, delay: 100} );
 
     sr.reveal('.text-reveal');
-    sr.reveal('.sequence', { interval: 500, viewFactor: 1});
-    sr.reveal('.sequence-a', { interval: 500, viewFactor: 0});
+    sr.reveal('.sequence', { interval: 300, viewFactor: 0.6});
+    sr.reveal('.sequence-a', { interval: 300, viewFactor: 0});
     sr.reveal('.img-reveal', {viewFactor: 0.3})
     console.log("ScrollReveal");
 }

@@ -65,10 +65,12 @@ p{
 
 ul{
   margin-bottom: var(--size-3);
+  margin-top: var(--size-3);
 }
 
 li{
   font-size: var(--p-fs);
+  line-height: 150%;
   margin-left: 3rem;
 }
 
@@ -100,7 +102,11 @@ li{
 }
 
 #slide-zero{
-  min-height: 100vh;
+  /* min-height: 100vh; */
+}
+
+.content-container{
+  max-width: 1920px;
 }
 
 .text-content-container, .img-row, .text-side-img{
@@ -196,8 +202,6 @@ img, .img{
   font-weight: bold;
 }
 
-/* Need to return to the decor line to sort out the responsiveness later on */
-
 #globe-container{
   position: relative;
   height: 60vw;
@@ -207,6 +211,8 @@ img, .img{
   position: absolute;
   width: 100%;
   z-index: -8000;
+  display: flex;
+  align-items: center;
 }
 
 #decor-line img{
@@ -217,19 +223,28 @@ img, .img{
 /* Desktop style */
 @media only screen and (min-width: 1024px) {
   #globe-container{
-    height: max(40vw, 600px);
+    height: max(600px, 35vw);
   }
 
   #decor-line{
-    top: -10vw;
+    top: -9rem;
   }
 
   #decor-line img{
-    margin: auto;
+    width: 80%;
   }
 
   .slide{
     padding: 4rem 0;
+  }
+  
+  .content-container{
+    margin: auto;
+  }
+
+  
+  #slide-two .content-container{
+    min-width: 70vw;
   }
 
   .text-content-container, .img-row, .text-side-img{
@@ -237,8 +252,8 @@ img, .img{
   }
 
   .img-row, .img-reveal{
-    margin-top: 4rem;
-    margin-bottom: 4rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 
   .text-content-container p, .text-content-container h3, .text-content-container ul, .special-case-text p, .special-case-text h3, .special-case-text ul{
@@ -266,14 +281,24 @@ img, .img{
     width: 50em;
   }
 
+  #two-svg{
+    width: 35em;
+  }
+
   .col img, col .img{
     width: auto;
   }
-  
-  #two-svg{
-    width: 30em;
-  }
+
   .slide-control{
     visibility: visible;
+  }
+}
+
+@media only screen and (min-width: 1600px){
+  #decor-line img{
+    width: 60%;
+  }
+  #globe-container{
+    height: max(600px, 15vw);
   }
 }
