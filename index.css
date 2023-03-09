@@ -36,13 +36,13 @@ body {
 
 h1{
   font-size: var(--h1-fs);
-  margin-bottom: var(--size-3);
+  margin-bottom: var(--size-6);
   text-align: center;
 }
 
 h2{
   font-size: var(--h2-fs);
-  margin-bottom: var(--size-3);
+  margin-bottom: var(--size-6);
   text-align: center;
 }
 
