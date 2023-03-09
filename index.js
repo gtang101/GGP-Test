@@ -33,3 +33,30 @@ window.onload = () => {
 };
 
 // Track where on the page
+const sections = document.querySelectorAll('section');
+const controlItems = document.querySelectorAll('.control-item');
+
+const observer = new IntersectionObserver(function(entries, observer){
+    entries.forEach((entry, index) => {
+        if(entry.isIntersecting){
+            sections.forEach((section, index) =>{
+                if (section.id == entry.target.id){
+                    controlItems[index].classList.add('active');
+                }
+            });
+            console.log(entry.target.id);
+            console.log(entry.intersectionRatio);
+        }
+        else {
+            sections.forEach((section, index) =>{
+                if (section.id == entry.target.id){
+                    controlItems[index].classList.remove('active');
+                }
+            });
+        }
+    });
+}, {threshold: 0.4});
+
+sections.forEach(section => {
+    observer.observe(section);
+});
