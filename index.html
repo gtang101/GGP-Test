@@ -10,21 +10,23 @@
 	<script src="https://code.jquery.com/jquery-3.6.3.min.js"
   			integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
   			crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script> -->
 	<title>Document</title>
 </head>
 <body>
 	<article id="journey-area">
-          <div class="slide" id="slide-zero">
+          <section class="slide" id="slide-zero">
 			<div class="text-content-container">
 						<h1>The Journey of a Girl</h1>
 						<p class="text-center">One in eight people alive today is a girl under the age of eighteen.</p>
 						<p class="text-center">Global Girl Project is dedicated to mobilising girls who live in poverty within the Global South. We support them to become leaders for their families, communities, countries and the world. </p>
 						<p class="text-center">Scroll down to learn about how we do this.</p>
 					  </div>
-					  <div id="decor-line" class="center-grid"><img class="flex" src="https://drive.google.com/uc?id=1MLNxDdkr-SkAnWHJMtolERstzEm8cZVN" alt=""></div>
-		  </div>
+					  <div id="globe-container">
+						<div id="decor-line" class="center-grid"><img class="flex" src="https://drive.google.com/uc?id=1MLNxDdkr-SkAnWHJMtolERstzEm8cZVN" alt=""></div>
+					  </div>
+		  </section>
 
           <section id="slide-one" class="slide">
 			<div class="text-content-container">
@@ -253,7 +255,7 @@
 				<h2>6. International network & ecosystem</h2>
 				<p>Global Girl Project has a lasting and sustainable impact as our girls make changes worldwide with support from each other. They join Global Graduates Connect (GGC) Network, a dynamic ecosystem offering opportunities to make an impact, led by the girls. This includes: project grants for girls to run local initiatives, storytelling to share experiences, perspectives and ideas, networking, and leadership opportunities through internships, teaching, supporting others, or advisory roles on committees.</p>
 			  </div>
-			<div class="center-grid img-reveal"><img id='six-svg' src='https://drive.google.com/uc?id=1FWRxbTgPeBai5Wjrw628vDdcWNg2GxIk' alt=""/></div>
+			<div class="center-grid img-reveal"><img id='six-svg' src='https://drive.google.com/uc?id=1DxPu9ACtqFWXVl8IVRsgMRcMIrYtzZrK' alt=""/></div>
 			<div class="text-content-container">
 				<div class='quote-block'>
 				  <p class='quote'>“The girls see girls around the world doing different things, and they know that they can do the same.”</p>
@@ -262,7 +264,7 @@
 			  </div>
 		  </section>
 
-          <div id="slide-seven" class="slide">
+          <section id="slide-seven" class="slide">
 			<div class="text-content-container">
 				<h2>7. Impact</h2>
 				<p>Our partners and program create significant impact: boosting our girls' confidence and self-worth, developing their leadership skills, and empowering them to lead in their communities. They use their voice, speaking up about their needs and concerns, turning their ideas into reality, connecting them to a global network of girls for inspiration and support. They now see themselves as leaders!</p>
@@ -271,14 +273,14 @@
 				  <p class='quote-credit'>— Global Girl Graduate</p>
 				</div>
 			  </div>
-			<div class="center-grid img-reveal"><img id='seven-svg' src='https://drive.google.com/uc?id=13C1gW0zzGaMCc_KQALJDYGOqp1S-tWUK' alt=""/></div>
+			<div class="center-grid img-reveal"><img id='seven-svg' src='https://drive.google.com/uc?id=1yX6WH-Qp0WQ-s4grtbwLxvY5_Ry-QZTt' alt=""/></div>
 			<div class="text-content-container">
 				<div class='quote-block'>
 				  <p class='quote'>"They have found a way where they can feel good and confident as a girl, they can learn how to make change, and they know they have the power.”</p>
 				  <p class='quote-credit'>— Clyfane, Haiti facilitator</p>
 				</div>
 			  </div>
-		  </div>
+			</section>
 
 	</article>
 	<div class="loader">
@@ -288,63 +290,33 @@
 
 	<div class="flex slide-control">
 		<div class="control-group flex flex-center flex-column	">
-			<a href="#slide-one">
-				<div class="control-item">1</div>
+			<a href="#slide-zero" data-target="#slide-zero">
+				<div class="control-item active">1</div>
 			</a>
-			<a href="#slide-two">
+			<a href="#slide-one" data-target="#slide-one">
 				<div class="control-item">2</div>
 			</a>
-			<a href="#slide-three">
+			<a href="#slide-two" data-target="#slide-two">
 				<div class="control-item">3</div>
 			</a>
-			<a href="#slide-four">
+			<a href="#slide-three" data-target="#slide-three">
 				<div class="control-item">4</div>
 			</a>
-			<a href="#slide-five">
+			<a href="#slide-four" data-target="#slide-four">
 				<div class="control-item">5</div>
 			</a>
-			<a href="#slide-six">
+			<a href="#slide-five" data-target="#slide-five">
 				<div class="control-item">6</div>
 			</a>
-			<a href="#slide-seven">
+			<a href="#slide-six" data-target="#slide-six">
 				<div class="control-item">7</div>
+			</a>
+			<a href="#slide-seven" data-target="#slide-seven">
+				<div class="control-item">8</div>
 			</a>
 		</div>
 	</div>
 
-	<script>
-	// Add class text-reveal to all the child within text-content-container class
-		const textContainer = document.querySelectorAll(".text-content-container, .special-case-text");
-		
-		function addTextReveal(){
-			for (let i = 0; i < textContainer.length; i++){
-				const current = textContainer[i];
-				for (const el of current.children){
-					el.classList.add('text-reveal');
-				}
-			}
-			console.log("Add text-reveal class to all elements under text-content-container");
-		};
-		
-		// Scroll Reveal
-		function scrollRevealStart(){
-			const sr = ScrollReveal( {viewFactor: 0.6, delay: 100} );
-		
-			sr.reveal('.text-reveal');
-			sr.reveal('.sequence', { interval: 800, viewFactor: 1});
-			sr.reveal('.sequence-a', { interval: 800, viewFactor: 0});
-			sr.reveal('.img-reveal', {viewFactor: 0.3})
-			console.log("ScrollReveal");
-		}
-		
-		// On load
-		window.onload = () => {
-			console.log("Loading");
-			$(".loader").fadeOut("slow");
-			addTextReveal();
-			$(".text-reveal, .sequence, .sequence-a, .img-reveal").addClass('load-hidden');
-			scrollRevealStart();
-			console.log("Loaded");
-		};</script>
+	<script src="index.js"></script>
 </body>
 </html>

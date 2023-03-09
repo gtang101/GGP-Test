@@ -55,11 +55,12 @@ h3{
 p{
   font-size: var(--p-fs);
   margin-top: var(--size-3);
+  line-height: 150%;
 }
 
-.text-content-container p, .text-content-container h3, .text-content-container ul{
-  margin-left: var(--size-fluid-3);
-  margin-right: var(--size-fluid-3);
+.text-content-container p, .text-content-container h3, .text-content-container ul, .special-case-text p, .special-case-text h3, .special-case-text ul{
+  margin-left: var(--size-fluid-1);
+  margin-right: var(--size-fluid-1);
 }
 
 ul{
@@ -113,7 +114,7 @@ li{
 }
 
 .quote-block p {
-  font-size: var(--h4-fs);
+  font-size: var(--h3-fs);
   color: var(--quote-text-color);
   text-align: center;
 }
@@ -141,14 +142,6 @@ p.quote{
 .flex-center{
   justify-content: center;
   align-items: center;
-}
-
-.relative{
-  position: relative;
-}
-
-.absolute{
-  position: absolute;
 }
 
 img, .img{
@@ -197,7 +190,7 @@ img, .img{
   background-color: hsla(0, 0%, 100%);
 }
 
-.control-item:hover, a:focus-within .control-item{
+.control-item:hover, a:focus-within .control-item, .control-item.active{
   background-color: var(--bg-color-1);
   cursor: pointer;
   font-weight: bold;
@@ -205,26 +198,42 @@ img, .img{
 
 /* Need to return to the decor line to sort out the responsiveness later on */
 
+#globe-container{
+  position: relative;
+  height: 60vw;
+}
+
 #decor-line{
   position: absolute;
-  top: 10vh;
   width: 100%;
   z-index: -8000;
 }
 
 #decor-line img{
-  width: 76%;
+  width: 100%;
   margin: auto;
 }
 
 /* Desktop style */
 @media only screen and (min-width: 1024px) {
+  #globe-container{
+    height: max(40vw, 600px);
+  }
+
+  #decor-line{
+    top: -10vw;
+  }
+
+  #decor-line img{
+    margin: auto;
+  }
+
   .slide{
     padding: 4rem 0;
   }
 
   .text-content-container, .img-row, .text-side-img{
-    margin: 0 var(--size-fluid-8);
+    margin: 0 var(--size-fluid-7);
   }
 
   .img-row, .img-reveal{
@@ -232,7 +241,7 @@ img, .img{
     margin-bottom: 4rem;
   }
 
-  .text-content-container p, .text-content-container h3, .text-content-container ul{
+  .text-content-container p, .text-content-container h3, .text-content-container ul, .special-case-text p, .special-case-text h3, .special-case-text ul{
     margin-left: var(--size-fluid-6);
     margin-right: var(--size-fluid-6);
   }
