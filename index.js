@@ -15,10 +15,12 @@ function addTextReveal(){
 function scrollRevealStart(){
     const sr = ScrollReveal( {viewFactor: 0.4, delay: 100} );
 
+    //general
     sr.reveal('.text-reveal');
     sr.reveal('.sequence', { interval: 300, viewFactor: 0.6});
     sr.reveal('.sequence-a', { interval: 300, viewFactor: 0});
-    sr.reveal('.img-reveal', { viewFactor: 0.3 })
+    sr.reveal('.img-reveal', { viewFactor: 0.3 });
+
     console.log("ScrollReveal");
 }
 
@@ -65,3 +67,5 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
   }else{
     console.log("script disabled");
   }
+
+//   Scroll Reveal Animation

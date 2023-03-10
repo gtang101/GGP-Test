@@ -220,6 +220,8 @@ img, .img{
   margin: auto;
 }
 
+
+
 /* Desktop style */
 @media only screen and (min-width: 1024px) {
   #globe-container{
