@@ -244,11 +244,11 @@ img, .img{
 
   
   #slide-two .content-container{
-    min-width: 70vw;
+    width: 100%;
   }
 
   .text-content-container, .img-row, .text-side-img{
-    margin: 0 var(--size-fluid-7);
+    margin: 0 var(--size-fluid-6);
   }
 
   .img-row, .img-reveal{
@@ -294,11 +294,14 @@ img, .img{
   }
 }
 
-@media only screen and (min-width: 1600px){
+@media only screen and (min-width: 1700px){
   #decor-line img{
     width: 60%;
   }
   #globe-container{
     height: max(600px, 15vw);
+  }
+  #slide-two .content-container p, #slide-two .content-container ul{
+    margin-left: var(--size-fluid-6);
   }
 }
