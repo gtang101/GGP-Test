@@ -24,6 +24,15 @@ function scrollRevealStart(){
     console.log("ScrollReveal");
 }
 
+// Send Height
+function sendHeight() {
+    const height = app.clientHeight;
+    if (height) {
+        //Remember to change this once the URL change
+      window.parent.postMessage({ height }, "https://www.globalgirlproject.org/testjourney");
+    }
+  }
+
 // On load
 window.onload = () => {
     console.log("Loading");
@@ -31,7 +40,8 @@ window.onload = () => {
     addTextReveal();
     $(".text-reveal, .sequence, .sequence-a, .img-reveal").addClass('load-hidden');
     scrollRevealStart();
-    console.log("Loaded");
+    sendHeight();
+    console.log("Loaded and sent height");
 };
 
 // Track where on the page
