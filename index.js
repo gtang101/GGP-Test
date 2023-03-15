@@ -36,6 +36,8 @@ window.onload = () => {
 
 // Track where on the page
 if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+    console.log("script disabled");
+  }else{
     console.log("Nav track active");
     const sections = document.querySelectorAll('section');
     const controlItems = document.querySelectorAll('.control-item');
@@ -64,8 +66,4 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
     sections.forEach(section => {
         observer.observe(section);
     });
-  }else{
-    console.log("script disabled");
   }
-
-//   Scroll Reveal Animation
