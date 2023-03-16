@@ -29,6 +29,8 @@ function sendHeight() {
     const height = app.clientHeight;
     if (height) {
         //Remember to change this once the URL change
+    const journey = document.querySelector("#journey-area");
+    const height = journey.clientHeight;
       window.parent.postMessage({ height }, "https://www.globalgirlproject.org/testjourney");
     }
 };

@@ -168,9 +168,10 @@ img, .img{
 
 /* Control group */
 .slide-control{
-  position: sticky;
+  position: fixed;
   top: 2rem;
   height: 0;
+  z-index: 9000;
   -ms-overflow-style: none;
   scrollbar-width: none;
   visibility: hidden;
