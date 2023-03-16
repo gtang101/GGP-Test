@@ -59,7 +59,7 @@ window.onload = () => {
 //             sections.forEach((section, index) =>{
 //                 if (section.id == entry.target.id){
 //                     controlItems[index].classList.add('active');
-//                 }
+//                 }add
 //             });
 //             // console.log(entry.target.id);
 //             // console.log(entry.intersectionRatio);
