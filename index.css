@@ -168,7 +168,7 @@ img, .img{
 
 /* Control group */
 .slide-control{
-  position: fixed;
+  position: sticky;
   height: 100vh;
   overflow-y: scroll;
   bottom: 0;
