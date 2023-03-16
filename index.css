@@ -169,7 +169,7 @@ img, .img{
 /* Control group */
 .slide-control{
   position: fixed;
-  bottom: 0;
+  bottom: 40%;
   height: auto;
   z-index: 9000;
   -ms-overflow-style: none;
