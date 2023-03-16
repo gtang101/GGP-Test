@@ -169,9 +169,8 @@ img, .img{
 /* Control group */
 .slide-control{
   position: sticky;
-  height: 100vh;
-  overflow-y: scroll;
-  bottom: 0;
+  top: 2rem;
+  height: 0;
   -ms-overflow-style: none;
   scrollbar-width: none;
   visibility: hidden;
