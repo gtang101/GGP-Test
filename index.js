@@ -26,8 +26,7 @@ function scrollRevealStart(){
 
 // Send Height
 function sendHeight() {
-    const journey = document.querySelector("#journey-area");
-    const height = journey.clientHeight;
+    const height = app.clientHeight;
     if (height) {
         //Remember to change this once the URL change
       window.parent.postMessage({ height }, "https://www.globalgirlproject.org/testjourney");
