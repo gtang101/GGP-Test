@@ -46,35 +46,35 @@ window.onload = () => {
 };
 
 // Track where on the page
-if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-    console.log("script disabled");
-  }else{
-    console.log("Nav track active");
-    const sections = document.querySelectorAll('section');
-    const controlItems = document.querySelectorAll('.control-item');
+// if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+//     console.log("script disabled");
+//   }else{
+//     console.log("Nav track active");
+//     const sections = document.querySelectorAll('section');
+//     const controlItems = document.querySelectorAll('.control-item');
 
-    const observer = new IntersectionObserver(function(entries, observer){
-    entries.forEach((entry, index) => {
-        if(entry.isIntersecting){
-            sections.forEach((section, index) =>{
-                if (section.id == entry.target.id){
-                    controlItems[index].classList.add('active');
-                }
-            });
-            // console.log(entry.target.id);
-            // console.log(entry.intersectionRatio);
-        }
-        else {
-            sections.forEach((section, index) =>{
-                if (section.id == entry.target.id){
-                    controlItems[index].classList.remove('active');
-                    }
-                });
-            }
-        });
-    }, {threshold: 0.4});
+//     const observer = new IntersectionObserver(function(entries, observer){
+//     entries.forEach((entry, index) => {
+//         if(entry.isIntersecting){
+//             sections.forEach((section, index) =>{
+//                 if (section.id == entry.target.id){
+//                     controlItems[index].classList.add('active');
+//                 }
+//             });
+//             // console.log(entry.target.id);
+//             // console.log(entry.intersectionRatio);
+//         }
+//         else {
+//             sections.forEach((section, index) =>{
+//                 if (section.id == entry.target.id){
+//                     controlItems[index].classList.remove('active');
+//                     }
+//                 });
+//             }
+//         });
+//     }, {threshold: 0.4});
 
-    sections.forEach(section => {
-        observer.observe(section);
-    });
-  }
+//     sections.forEach(section => {
+//         observer.observe(section);
+//     });
+//   }

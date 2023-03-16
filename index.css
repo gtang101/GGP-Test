@@ -296,7 +296,7 @@ img, .img{
   }
 
   .slide-control{
-    visibility: visible;
+    /* visibility: visible; */
   }
 }
 
