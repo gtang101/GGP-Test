@@ -31,7 +31,7 @@ function sendHeight() {
         //Remember to change this once the URL change
       window.parent.postMessage({ height }, "https://www.globalgirlproject.org/testjourney");
     }
-  }
+};
 
 // On load
 window.onload = () => {
