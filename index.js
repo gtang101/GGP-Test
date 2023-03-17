@@ -8,7 +8,7 @@ function addTextReveal(){
             el.classList.add('text-reveal');
         }
     }
-    console.log("Add text-reveal class to all elements under text-content-container");
+    // console.log("Add text-reveal class to all elements under text-content-container");
 };
 
 // Scroll Reveal
@@ -21,7 +21,7 @@ function scrollRevealStart(){
     sr.reveal('.sequence-a', { interval: 300, viewFactor: 0});
     sr.reveal('.img-reveal', { viewFactor: 0.3 });
 
-    console.log("ScrollReveal");
+    // console.log("ScrollReveal");
 }
 
 // Send Height
@@ -39,7 +39,7 @@ const leftNav = document.querySelector(".slide-control");
 const visibilityOfLeftNav = getComputedStyle(leftNav).visibility;
 
 if (visibilityOfLeftNav == 'visible'){
-    console.log("Nav track active");
+    // console.log("Nav track active");
     const sections = document.querySelectorAll('section');
     const controlItems = document.querySelectorAll('.control-item');
 
@@ -68,7 +68,7 @@ if (visibilityOfLeftNav == 'visible'){
         observer.observe(section);
     });
 }else{
-    console.log("script disabled");
+    // console.log("script disabled");
 };
 
 // On load
