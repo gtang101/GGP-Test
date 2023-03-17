@@ -169,7 +169,7 @@ img, .img{
 /* Control group */
 .slide-control{
   position: fixed;
-  bottom: 40%;
+  top: 0;
   height: auto;
   z-index: 9000;
   -ms-overflow-style: none;
@@ -293,10 +293,11 @@ img, .img{
 
   .col img, col .img{
     width: auto;
+    max-height: 500px;
   }
 
   .slide-control{
-    /* visibility: visible; */
+    visibility: visible;
   }
 }
 

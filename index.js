@@ -25,13 +25,50 @@ function scrollRevealStart(){
 }
 
 // Send Height
-function sendHeight() {
-    const journey = document.querySelector("#journey-area");
-    const height = journey.clientHeight;
-    if (height) {
-        //Remember to change this once the URL change
-      window.parent.postMessage({ height }, "https://www.globalgirlproject.org/testjourney");
-    }
+// function sendHeight() {
+//     const journey = document.querySelector("#journey-area");
+//     const height = journey.clientHeight;
+//     if (height) {
+//         //Remember to change this once the URL change
+//       window.parent.postMessage({ height }, "https://www.globalgirlproject.org/testjourney");
+//     }
+// };
+
+// Track where on the page
+const leftNav = document.querySelector(".slide-control");
+const visibilityOfLeftNav = getComputedStyle(leftNav).visibility;
+
+if (visibilityOfLeftNav == 'visible'){
+    console.log("Nav track active");
+    const sections = document.querySelectorAll('section');
+    const controlItems = document.querySelectorAll('.control-item');
+
+    const observer = new IntersectionObserver(function(entries, observer){
+    entries.forEach((entry, index) => {
+        if(entry.isIntersecting){
+            sections.forEach((section, index) =>{
+                if (section.id == entry.target.id){
+                    controlItems[index].classList.add('active');
+                }
+            });
+            // console.log(entry.target.id);
+            // console.log(entry.intersectionRatio);
+        }
+        else {
+            sections.forEach((section, index) =>{
+                if (section.id == entry.target.id){
+                    controlItems[index].classList.remove('active');
+                    }
+                });
+            }
+        });
+    }, {threshold: 0.4});
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+}else{
+    console.log("script disabled");
 };
 
 // On load
@@ -41,40 +78,5 @@ window.onload = () => {
     addTextReveal();
     $(".text-reveal, .sequence, .sequence-a, .img-reveal").addClass('load-hidden');
     scrollRevealStart();
-    sendHeight();
-    console.log("Loaded and sent height");
+    console.log("Loaded");
 };
-
-// Track where on the page
-// if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-//     console.log("script disabled");
-//   }else{
-//     console.log("Nav track active");
-//     const sections = document.querySelectorAll('section');
-//     const controlItems = document.querySelectorAll('.control-item');
-
-//     const observer = new IntersectionObserver(function(entries, observer){
-//     entries.forEach((entry, index) => {
-//         if(entry.isIntersecting){
-//             sections.forEach((section, index) =>{
-//                 if (section.id == entry.target.id){
-//                     controlItems[index].classList.add('active');
-//                 }add
-//             });
-//             // console.log(entry.target.id);
-//             // console.log(entry.intersectionRatio);
-//         }
-//         else {
-//             sections.forEach((section, index) =>{
-//                 if (section.id == entry.target.id){
-//                     controlItems[index].classList.remove('active');
-//                     }
-//                 });
-//             }
-//         });
-//     }, {threshold: 0.4});
-
-//     sections.forEach(section => {
-//         observer.observe(section);
-//     });
-//   }
