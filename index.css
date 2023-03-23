@@ -8,7 +8,7 @@
   --quote-text-color: #175950;
   --root-fs: 16px;
   --ratio: 0.75;
-  --p-fs: var(--root-fs);
+  --p-fs: calc(var(--root-fs) * 1.125);
   --h1-fs: calc(var(--root-fs) * 3);
   --h2-fs: calc(var(--h1-fs) * var(--ratio));
   --h3-fs: calc(var(--h2-fs) * var(--ratio));
@@ -192,8 +192,9 @@ img, .img{
 .control-item{
   border: solid black 4px;
   border-radius: 100%;
-  display: grid;
-  place-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   aspect-ratio: 1/1;
   min-width: 44px;
   padding: 0.4rem;
