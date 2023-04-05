@@ -231,7 +231,7 @@ img, .img{
 /* Desktop style */
 @media only screen and (min-width: 1024px) {
   #globe-container{
-    height: max(600px, 35vw);
+    height: max(450px, 35vw);
   }
 
   #decor-line{
